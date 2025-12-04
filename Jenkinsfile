@@ -57,9 +57,9 @@ pipeline {
         always {
             script {
                 sh """
-                    rm -f ${WORKSPACE}/tfplan
+                    rm -f ${WORKSPACE}/${CONF_DIR}/tfplan
                     rm -f ${WORKSPACE}/ssh_key.pub
-                    rm -f ${WORKSPACE}/terraform.tfstate || true
+                    rm -f ${WORKSPACE}/${CONF_DIR}/terraform.tfstate
                     unset AWS_ACCESS_KEY_ID
                     unset AWS_SECRET_ACCESS_KEY
                 """
