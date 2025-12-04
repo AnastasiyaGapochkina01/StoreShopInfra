@@ -17,6 +17,6 @@ resource "aws_security_group" "init_sg" {
   }
 
   lifecycle {
-    ignore_changes = all
+    ignore_changes = ["name", "ingress", "egress"]
   }
 }
