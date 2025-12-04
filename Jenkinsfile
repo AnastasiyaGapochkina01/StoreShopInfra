@@ -59,6 +59,7 @@ pipeline {
                 sh """
                     rm -f ${WORKSPACE}/tfplan
                     rm -f ${WORKSPACE}/ssh_key.pub
+                    rm -f ${WORKSPACE}/terraform.tfstate || true
                     unset AWS_ACCESS_KEY_ID
                     unset AWS_SECRET_ACCESS_KEY
                 """
